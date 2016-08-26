@@ -13,6 +13,10 @@ ul {
 	line-height: 2em;
 }
 
+li {
+	margin-left: auto auto auto -40px;
+}
+
 p, .jumbotron p {
 	font-size: 12pt;
 }
