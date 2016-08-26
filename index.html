@@ -168,7 +168,7 @@
         }
     </style>
     <div class="container-fluid">
-        <p class="text-center"><font color="white">Copyright © Ajay Mistry 2016</font></p>
+        <p class="text-center"><span style="color:#fff">Copyright © Ajay Mistry 2016</span></p>
         <style type="text/css">
             p{
                 margin-top: 14px;
@@ -187,18 +187,23 @@
 <!-- Smoothscroll -->
 <script>
 $(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top-60
-        }, 1000);
-        return false;
-      }
-    }
-  });
+	var scrollers = $("html, body");
+
+	scrollers.on("mousewheel", function() {
+		scrollers.stop();
+	});
+
+	$('a[href*="#"]:not([href="#"])').click(function() {
+		var target = this.hash;
+		target = target.length ? $(target) : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+			scrollers.stop();
+			scrollers.animate({
+				scrollTop: target.offset().top - 60
+			}, 1000);
+			return false;
+		}
+	});
 });
 </script>
 
