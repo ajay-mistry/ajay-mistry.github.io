@@ -11,10 +11,7 @@ ul {
 	list-style: none;
 	font-size: 12pt;
 	line-height: 2em;
-}
-
-li {
-	margin-left: -40px;
+	padding: 0;
 }
 
 p, .jumbotron p {
