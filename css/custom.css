@@ -1,0 +1,22 @@
+body {
+	background: #BDBDBD;
+	font-family: "Segoe UI";
+}
+
+h1 {
+	font-family: "Segoe UI Light";
+}
+
+p {
+	font-size: 12pt;
+}
+
+.blank {
+	margin: 15px;
+	margin-top: 10px;
+}
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
