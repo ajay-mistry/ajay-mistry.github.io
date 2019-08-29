@@ -23,9 +23,16 @@ p, .jumbotron p {
 	border-radius: 0;
 }
 
-.company-img:hover {
-	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-	padding: 3px 0px 3px 3px;
-	margin: 5px 1px 3px 0px;
-	border: 1px solid rgba(81, 203, 238, 1);
-}
+.company-img {    
+	-webkit-transition: opacity .35s ease-in-out;
+	-moz-transition: opacity .35s ease-in-out;
+	-ms-transition: opacity .35s ease-in-out;
+	-o-transition: opacity .35s ease-in-out;
+	transition: opacity .35s ease-in-out;
+  }
+  
+  .company-img:hover {
+	zoom: 1;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+  }
